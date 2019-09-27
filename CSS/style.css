@@ -93,10 +93,6 @@ h1,h2,h3,h4,h5,h6{
   background: #fff;
   padding: 1rem;
 }
-aside.card{
-  margin-top: 1rem;
-}
-
 .bg-dark{
   background: var(--dark-color);
   color: #fff;
