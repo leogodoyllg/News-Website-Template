@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Solodev's Custom Google Search</title>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="google-search.css" rel="stylesheet" type="text/css"/>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+
+</head>
+<body >
+
+<div class="container">
+	<div class="col-md-12 ct-content">
+                        
+		<form id="searchForm" action="">
+			<div class="row">
+				<div class="col-md-10 col-sm-12">
+					<input id="txtSearchTerm" name="q" class="search-page-search" placeholder="What are you looking for?" value="">
+				</div>
+				<div class="col-md-2 col-sm-12">
+					<input type="submit" class="search-page-search-submit" value="Search">
+				</div>
+			</div>
+		</form>
+		<div id="searchResult"></div>
+		<div id="output"></div>
+		<div class="pager_controls">
+			<p>
+				<a onclick="documentTrack('#');" href="#" id="lnkPrev" title="Display previous result page" style="display:none;">Previous</a> <a onclick="documentTrack('#');" href="#" id="lnkNext" title="Display next result page" style="display:none;">Next</a>
+			</p>
+		</div>
+		
+		<!-- Number of searches per day will be limited unless google_api_key is specified (https://console.developers.google.com) -->
+		<!-- Add your google_cse_id after registering (https://cse.google.com/) -->
+		<script type="text/javascript">
+			var mGoogleApiKey = "YYYYYYYYY__YYYYYYYYYYY-1111111111111111";
+			var mGoogleCustomSearchKey = "123456789123456789123:abcdefghijk";
+		</script> 
+		<script src="search-script.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var searchTerm = GetURLParameter('q');
+			$('#txtSearchTerm').val(searchTerm);
+			Search($("#txtSearchTerm").val(),0);
+			
+			function GetURLParameter(sParam){
+					var sPageURL = window.location.search.substring(1);
+					var sURLVariables = sPageURL.split('&');
+					for (var i = 0; i < sURLVariables.length; i++) 
+					{
+							var sParameterName = sURLVariables[i].split('=');
+							if (sParameterName[0] == sParam) 
+							{
+									return sParameterName[1];
+							}
+					}
+			}
+		</script>
+						
+    </div>
+</div>	
+
+</body>
+</html>
