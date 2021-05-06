@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Solodev's Custom Google Search</title>
-
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-	<link href="google-search.css" rel="stylesheet" type="text/css"/>
+	<title>Search</title>	
 	
 
 
 </head>
 <body >
 
-<div class="container">
-	<div class="col-md-12 ct-content">
-                        
-		<form id="searchForm" action="">
-			<div class="row">
-				<div class="col-md-10 col-sm-12">
-					<input id="txtSearchTerm" name="q" placeholder="What are you looking for?" value="">
-				</div>
-				<div class="col-md-2 col-sm-12">
-					<input type="submit" value="Search">
-				</div>
-			</div>
-			<script>
-				var a=document.getElementById("txtSearchTerm").vlaue;
-// Check if the condition is true and then redirect.
-if (a=="sports" ) {
-  window.location.href = "https://www.example.com";
+<input id="text_a" type="text" />
+<p id="answer"></p>
+<button onclick="myFunction()">Check</button>
+<script type = "text/javascript">
+function myFunction()
+{
+var a=document.getElementById("text_a").value;
+
+if (a=="sports")
+  {
+window.location = "http://localhost/News/sports.html";
+  }
+else if (a=="politics")
+  {
+window.location = "http://localhost/News/politics.html";
+  }
+  else if (a=="covid")
+  {
+window.location = "http://localhost/News/covid.html";
+  }
+  else if (a=="international")
+  {
+window.location = "http://localhost/News/international.html";
+  }
+  else if (a=="national")
+  {
+window.location = "http://localhost/News/national.html";
+  }
+
 }
 </script>
-		</form>
-	
-	
-		
-		<!-- Number of searches per day will be limited unless google_api_key is specified (https://console.developers.google.com) -->
-		<!-- Add your google_cse_id after registering (https://cse.google.com/) -->
-	
-						
-    </div>
-</div>	
 
 </body>
 </html>
