@@ -1,0 +1,39 @@
+.layout-main{
+	.search-bar{
+		#search-input{
+			.searchQuery{
+				
+			}
+			.search-btn{
+				cursor:pointer
+			}
+		}
+	}
+	.row{
+		.carousel{
+			.carousel-indicators{}
+			.carousel-inner{
+				
+				.item{
+					.carousel-panel {
+					    .panel-body{
+					    	padding:0;
+							padding: 0;
+							
+							.book-cover{
+							    width: 60%;
+							    margin:auto;
+							}
+						}
+						.book-title, .panel-footer{
+  								white-space: nowrap;
+  								overflow: hidden;
+  								text-overflow: ellipsis;
+							}
+					}
+				}
+			}
+		}
+	}
+}
+

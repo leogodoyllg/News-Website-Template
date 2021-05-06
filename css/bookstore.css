@@ -1,0 +1,14 @@
+.layout-main .search-bar #search-input .search-btn {
+  cursor: pointer; }
+.layout-main .row .carousel .carousel-inner .item .carousel-panel .panel-body {
+  padding: 0;
+  padding: 0; }
+  .layout-main .row .carousel .carousel-inner .item .carousel-panel .panel-body .book-cover {
+    width: 60%;
+    margin: auto; }
+.layout-main .row .carousel .carousel-inner .item .carousel-panel .book-title, .layout-main .row .carousel .carousel-inner .item .carousel-panel .panel-footer {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+/*# sourceMappingURL=bookstore.css.map */

@@ -1,0 +1,36 @@
+
+<div id="carousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+		<li ng-repeat="item in carouselData"  data-slide-to="{{$index}}" class="indicator" data-target="#carousel">
+	</ol>
+	<div class="carousel-inner" role="listbox">
+		<div class="item" ng-class="{'active':$index==0}"  ng-repeat="slide in stack">
+			<div ng-repeat="item in slide" class="carousel-panel panel panel-default col-lg-2 col-sm-2 col-md-2 col-xs-3">
+					<div class="panel-heading book-title">{{item.title}}</div>
+						<div class="panel-body">
+						<a href='/#/bookstore/book/info/{{book.isbn}}'>
+							<img  class="img-responsive book-cover" ng-src="{{getImageLocation(item.image_loc)}}">
+						</a>
+						</div>
+					<div class="panel-footer price">
+				Price
+				<span>{{item.price| currency:"&#8377;"}}</span>
+			</div>
+			<div class="panel-footer" ng-click="addItemToCart(book)">
+				Add to Cart
+				<div class="glyphicon glyphicon-shopping-cart" ></div>
+			</div>
+			</div>
+			
+		</div>
+	</div>
+	<!-- Left and right controls -->
+    <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>

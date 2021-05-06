@@ -1,0 +1,49 @@
+.indicator {
+  background-color: grey; }
+
+.carousel-inner {
+  width: 70%;
+  margin: auto; }
+
+.carousel-panel {
+  margin: 0 11px 0 11px; }
+
+.carousel-inner {
+  width: 80%;
+  margin: auto; }
+
+.carousel-control {
+  width: 5%; }
+
+.item {
+  float: left;
+  overflow: hidden;
+  height: auto; }
+
+.item .carousel-panel {
+  float: left; }
+
+.panel-body, .panel-footer {
+  cursor: pointer; }
+
+.booklistDir .carousel-panel {
+  width: auto;
+  display: inline-block;
+  margin-bottom: 10px; }
+  .booklistDir .carousel-panel .glyphicon-shopping-cart, .booklistDir .carousel-panel .book-details {
+    cursor: pointer; }
+  .booklistDir .carousel-panel .price span {
+    float: right; }
+  .booklistDir .carousel-panel .panel-heading, .booklistDir .carousel-panel .panel-footer {
+    color: #990066;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 135px; }
+    .booklistDir .carousel-panel .panel-heading .glyphicon-shopping-cart, .booklistDir .carousel-panel .panel-footer .glyphicon-shopping-cart {
+      float: right; }
+  .booklistDir .carousel-panel .book-details .book-cover {
+    max-height: 126px;
+    margin: auto; }
+
+/*# sourceMappingURL=carousel.css.map */

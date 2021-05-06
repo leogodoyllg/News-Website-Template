@@ -1,0 +1,44 @@
+<div clas="container">
+    <div class="row">
+        <div class="col-lg-5 col-lg-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel panel-heading">
+                    <h3 class="panel-title">Payment info</h3>
+                </div>
+                <div class="panel panel-body">
+                    <form class="form" name="paymentForm">
+                        <div class="form-group">
+                           <label class="text-left control-label" for="inputCCnum">Enter credit/debit card number</label>
+                           <div class="input-group">
+                               <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
+                    <input ng-model="payment.cc_num" name="inputCCnum" class="form-control" id="inputCCnum" ng-minlength="16" ng-maxlength="16"  required> </input>
+                           </div>
+                           <p ng-show="paymentForm.inputCCnum.$invalid && !paymentForm.inputCCnum.$pristine" class="help-block">Invalid credit card number</p>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-lg-3">
+                            <label class="text-left control-label" for="inputExpMonth">Expiry month</label>
+                                <select required="" name="inputExpMonth" id="inputExpMonth" name="expMonth" ng-model="payment.expMonth" class="form-control selectpicker" ng-options="m for m in expMonths"></select>
+                            </div>
+
+                             <div class="col-lg-3 col-lg-offset-1">
+                            <label class="text-left control-label" for="inputExpyear">Expiry Year</label>
+                                <select required="" name="inputExpyear" id="inputExpyear" name="expYear" ng-model="payment.expYear" class="form-control selectpicker" ng-options="y for y in expYear"></select>
+                            </div>
+
+                             <div class="col-lg-3 col-lg-offset-1">
+                            <label class="text-left control-label" for="inputCvvNum">CVV</label>
+                                <input ng-model="payment.cvv" name="inputCvvNum" class="form-control" id="inputCvvNum" ng-minlength="3" ng-maxlength="3"  required> </input>
+                            </div>
+                            
+                        </div>
+                        <div class="">
+                           
+                            <button class="btn btn-danger col-lg-3" ng-disabled="shipmentForm.$invalid" ng-click="pay($event)">Pay</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

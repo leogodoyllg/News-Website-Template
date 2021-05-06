@@ -1,0 +1,40 @@
+@CHARSET "ISO-8859-1";
+.content-wrapper {
+  padding: 0 20% 0 20%; }
+  .content-wrapper .item-container {
+    font-size: large; }
+    .content-wrapper .item-container .image-container {
+      margin: auto;
+      height: 30%;
+      width: 41%; }
+      .content-wrapper .item-container .image-container img {
+        height: 30%;
+        width: 83%; }
+    .content-wrapper .item-container .cart .btn-addcart {
+      background-color: #800040;
+      border: none; }
+    .content-wrapper .item-container .wishlist .btn-addwish {
+      background-color: #008080;
+      border: none; }
+  .content-wrapper .details-container .product-info .nav_tabs li a {
+    font-size: large;
+    font-weight: 700; }
+  .content-wrapper .details-container .product-info .tab-content {
+    font-size: large; }
+    .content-wrapper .details-container .product-info .tab-content #service-one .product-desc {
+      padding: 10px; }
+    .content-wrapper .details-container .product-info .tab-content #service-three .ratings-container {
+      padding: 10px 10px 10px 10px; }
+      .content-wrapper .details-container .product-info .tab-content #service-three .ratings-container .ratings .ratee {
+        color: teal;
+        font-style: italic; }
+      .content-wrapper .details-container .product-info .tab-content #service-three .ratings-container .ratings .comments {
+        color: #cc0052; }
+
+.selected-star {
+  color: #003399 !important; }
+
+.unselected-star {
+  color: #4d88ff; }
+
+/*# sourceMappingURL=bookDetail.css.map */

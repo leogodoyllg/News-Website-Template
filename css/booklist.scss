@@ -1,0 +1,65 @@
+.book-list{
+	width: 100%;
+	.info-bar{
+		background: #fff;
+    	margin: 0 0 30px;
+    	border: solid 1px #e6e6e6;
+    	-webkit-box-sizing: border-box;
+    	-moz-box-sizing: border-box;
+    	box-sizing: border-box;
+    	padding: 20px;
+    	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,.1);
+    	box-shadow: 0 1px 5px rgba(0,0,0,.1);
+    	
+    	.row{
+    		.dropdown{
+    		    float: right;
+    		}
+    	}
+    	
+    	.sort-bar{
+    		.sort-options{
+    			li{
+    				cursor:pointer;
+    			}
+    			.selected-sort{
+    				
+    			}
+    		}
+    	}
+	}
+	
+	.tab-content{
+		.carousel-panel{
+			.glyphicon-shopping-cart, .book-details{
+				cursor:pointer;
+			}
+			width: auto;
+    		display: inline-block;
+			margin-bottom: 10px;
+			.price{
+				span{
+					float: right;
+				}
+			}
+			.panel-heading, .panel-footer{
+				color: #990066;
+				white-space: nowrap;
+    			overflow: hidden;
+    			text-overflow: ellipsis;
+    			max-width:135px;
+    			.glyphicon-shopping-cart{
+    				float:right;
+    				
+    			}
+			}
+			.book-details{
+				.book-cover{
+					max-height: 126px;
+					margin: auto;
+				}
+			}
+		}
+	}
+}
+

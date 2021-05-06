@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAMG,kDAAW;EACV,MAAM,EAAC,OAAO;AAWT,6EAAW;EACV,OAAO,EAAC,CAAC;EACZ,OAAO,EAAE,CAAC;EAEV,yFAAW;IACP,KAAK,EAAE,GAAG;IACV,MAAM,EAAC,IAAI;AAGhB,8JAA0B;EACtB,WAAW,EAAE,MAAM;EACnB,QAAQ,EAAE,MAAM;EAChB,aAAa,EAAE,QAAQ",
+"sources": ["bookstore.scss"],
+"names": [],
+"file": "bookstore.css"
+}

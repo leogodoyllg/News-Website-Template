@@ -1,0 +1,25 @@
+<div class="panel-group" id="accordion">
+<div class="panel panel-default sidebar-component" ng-repeat="item in navigationList.children">
+      <div class="panel-heading  component-heading accordion-toggle collapsed"  data-toggle="collapse"
+					data-target="#collapse{{$index}}-{{item.id}}" ng-click="filterByCategory($event, $index, item)">
+        	<h4 ng-if="item.data.name.trim()=='root'" class="panel-title">
+					Category
+					 <span ng-if="item.children.length >0 " class="component-collapse-icon glyphicon glyphicon-chevron-right pull-right" ></span>
+        
+			</h4>
+			<h4 ng-if="item.data.name.trim()!='root'" class="panel-title">
+					{{item.data.name}}
+					 <span ng-if="item.children.length >0 " class="component-collapse-icon glyphicon glyphicon-chevron-right pull-right" ></span>
+        			 <span ng-if="item.data.name == 'My orders'" class="component-collapse-icon glyphicon glyphicon-shopping-cart  pull-right" ></span>
+			        <span ng-if="item.data.name == 'Profile'" class="component-collapse-icon glyphicon glyphicon-user pull-right" ></span>
+			        <span ng-if="item.data.name == 'Gift Cards'" class="component-collapse-icon glyphicon glyphicon-gift pull-right" ></span>
+			        <span ng-if="item.data.name == 'Wish list'" class="component-collapse-icon glyphicon glyphicon-heart pull-right" ></span>
+			      
+			</h4>
+      </div>
+      <div id="collapse{{$index}}-{{item.id}}" class="panel-collapse collapse component-children">
+       
+        <collapse-list ng-if="item.children.length >0 " navigation-list="item"></collapse-list> 
+      </div>
+    </div>
+</div>

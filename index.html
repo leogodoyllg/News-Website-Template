@@ -1,156 +1,85 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  <link rel="stylesheet" href="./CSS/style.css">
-  <link rel="stylesheet" media = 'screen and (max-width: 768px)' href="./CSS/mobile.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <script src="https://kit.fontawesome.com/85a5fdd30e.js" async></script>
-
-  <title>NewsGrid | Your News Website</title>
+  <title>Register</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-  <nav id="main-nav">
+  <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
     <div class="container">
-      <img src="img/logo.png" alt="NewsMedia" class="logo">
-     
-      <ul>
-        <li><a href="index.html" class="current">Home</a></li>
-        <li><a href="about.html" >About</a></li>
-         <li><a href="google-search.html" >Search</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <header id = 'showcase'>
-    <div class="container">
-      <div class="showcase-container">
-        <div class="showcase-content">
-          <div class="category category-sports">
-            Sports
+      <div class="card login-card">
+        <div class="row no-gutters">
+          <div class="col-md-5">
+            <img src="images/login.jpg" alt="login" class="login-card-img">
           </div>
-          <h1>Sports Article</h1>
-          <p>Read Sports News Today</p>
-          <a href="article.html" class="btn btn-primary">Read More</a>
+          <div class="col-md-7">
+            <div class="card-body">
+              <div class="brand-wrapper">
+                <img src="images/logo.jpg" alt="logo" class="logo">
+              </div>
+              <p class="login-card-description">Create an Account</p>
+              <form id="reg-form">
+                  <div class="form-group">
+                   <input type="text" autocomplete="off" id="username" placeholder="Username" />
+                  </div>
+                  <div class="form-group mb-4">
+                   <input type="password" autocomplete="off" id="password" placeholder="Password" />
+                  </div>
+            
+                 <input type="submit" value="Submit Form" class="btn btn-block login-btn mb-4" />
+                </form>
+                
+
+		<script>
+			const form = document.getElementById('reg-form')
+			form.addEventListener('submit', registerUser)
+
+			async function registerUser(event) {
+				event.preventDefault()
+				const username = document.getElementById('username').value
+				const password = document.getElementById('password').value
+
+				const result = await fetch('/api/register', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						username,
+						password
+					})
+				}).then((res) => res.json())
+
+				if (result.status === 'ok') {
+					// everythign went fine
+					alert('Success')
+					window.location = "main.html";
+				} else {
+					alert(result.error)
+				}
+			}
+		</script>
+<a href="login.html">Login</a>
+                <nav class="login-card-footer-nav">
+               
+                </nav>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-
-  <section id="home-articles" class="py-2">
-    <div class="container">
-      <h2>Editors Picks</h2>
-      <div class="articles-container">
-        <article class="card">
-          <img src="img/articles/ent1.jpg" alt="photo">
-          <div>
-            <div class="category category-ent">
-              Entertainment
-            </div>
-            <h3>
-              <a href="article.html">Top Gun Maverick best film I have been a part of: Christopher McQuarrie.</a>
-            </h3>
-            <p>Writer-director Christopher McQuarrie, who is a part of the writing team on Tom Cruise’s Top Gun: Maverick and directs next two Mission: Impossible movies, has called the aviation drama one of the best films he has been a part of.</p>
-          </div>
-        </article>
-
-        <article class="card bg-dark">     
-          <div class="category category-sports">
-            Sports
-          </div>
-          <h3>
-            <a href="article.html">IPL 2021: 5 players pull out as India continues to suffer from second wave of Covid-19</a>
-          </h3>
-          <p>IPL 2021 is being held in strict bio-bubble environments across 6 major cities in India, which has been breaking the global record for the highest number of positive coronavirus cases for the past 5 day</p>
-        </article>
-        
-        <article class="card">     
-          <img src="img/articles/tech1.jpg" alt="photo">
-          <div class="category category-tech">
-            Technology
-          </div>
-          <h3>
-            <a href="article.html">How technology is making stock traders smarter than ever before</a>
-          </h3>
-          <p>The impact of disruptive technology on capital markets is as significant as fire was to the cavemen. It is time that leaders in the industry embrace new-age technologies which are further going to transform the capital markets ecosystem in the upcoming years.</p>
-        </article>
-        
-        <article class="card">     
-          <div class="category category-sports">
-            Sports
-          </div>
-          <h3>
-            <a href="article.html">Abhinav Bindra writes: ‘Cricketers can’t be totally deaf or blind to whatever is going on outside’</a>
-          </h3>
-          <p>Cricketers should play their part in getting right message across and/or contribute financially to curb the pandemic, says Olympic gold medalist Abhinav Bindra.</p>
-          <img src="img/articles/sports1.jpg" alt="photo">
-        </article>
-
-        <article class="card">     
-          <img src="img/articles/tech2.jpg" alt="photo">
-          <div class="category category-tech">
-            Technology
-          </div>
-          <h3>
-            <a href="article.html">How are we physiologically affected by bad audio?</a>
-          </h3>
-          <p>Sound can profoundly alter our state of mind and has the power to influence our thoughts, feelings, and behaviour.</p>
-          </article>
-
-          <article class="card bg-primary">     
-            <div class="category category-sports">
-              Sports
-            </div>
-            <h3>
-              <a href="article.html">IPL 2021 Highlights, CSK vs RCB: Jadeja powers CSK to 69-run win over RCB.</a>
-            </h3>
-            <p>Ravindra Jadeja smashed an unbeaten 28-ball 62 before taking three wickets and effecting a run out to power CSK to a 69-run victory over RCB. Check today's IPL match live score, scorecard, ball by ball commentary and highlights of 19th match between Chennai Super Kings and Royal Challengers Bangalore</p>
-          </article>
-
-          <article class="card">
-            <div>
-              <div class="category category-ent">
-                Entertainment
-              </div>
-              <h3>
-                <a href="article.html">Parvathy writes a heartfelt note as Uyare turns 2: I am so grateful.</a>
-              </h3>
-              <p>Uyare was the directorial debut of Manu Ashokan. In the film, Parvathy plays a character, who aspires to become a commercial flight pilot.</p>
-            </div>
-            <img src="img/articles/ent2.jpg" alt="photo">
-          </article>
-      </div>
-    </div>
-  </section>
-  
-  <footer id = 'main-footer' class = 'py-2'>
-    <div class="container footer-container">
-      <div>
-        <img src="img/logo_light.png" alt="logo">
-        <p>Welcome to our NewsGrid.</p>
-      </div>
-      <div>
-        <h3>Email Newsletter</h3>
-        <p>Please Subscribe to our Grid.</p>
-        <form>
-          <input type="email" placeholder="Email:" required>
-          <input type="submit" value="Subscribe" class = 'btn btn-primary'>
-        </form>
-      </div>
      
-      <div>
-        <h2>Join our Club</h2>
-        <p>Yay readers!Here is your chance to go Premium.</p>
-        <a href="#" class="btn btn-secondary">Join Now</a>
-      </div>
-      <div>
-      
-      </div>
     </div>
-  </footer>
+  </main>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap1.min.js"></script>
 </body>
 </html>

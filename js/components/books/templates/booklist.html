@@ -1,0 +1,40 @@
+<div class="container book-list" >
+	<div class="info-bar" >
+		<div class="row">
+				<div class="search-bar container col-xs-8">
+					<div class="row"> 
+					<div id='search-input'>
+						<div class="input-group">
+							<input type="text" name="" class="searchQuery form-control" ng-model='search.searchText'>
+							<!-- <button class="btn btn-danger input-group-addon"> -->
+								<span class="input-group-addon glyphicon glyphicon-search search-btn" ng-click='searchQuery()'></span>
+							<!-- </button> -->
+						</div>
+					</div>
+					</div>
+				</div>
+
+				<div class="col-xs-4 sort-bar">
+					<div class="dropdown ">
+					  <button class="btn btn-danger dropdown-toggle selected-sort" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					    {{sortConfig.selected}}
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu dropdown-menu-right sort-options" aria-labelledby="dropdownMenu1">
+					    
+							<li ng-repeat='sortOpt in sortOpts' ng-click='sortBookList($index)'>
+								<a>{{sortOpt}} </a>
+							</li>	    
+					  </ul>
+					</div>
+				</div>
+
+
+				
+		</div>
+	</div>
+	<div class="tab-content">
+		<div class="alert alert-info col-sm-8" role="alert" ng-if='!bookList || bookList.length==0'>No Books found for following criteria! Trye refining your search ..</div>
+		<book-list ng-if='bookList.length> 0' books='bookList' ></book-list>
+	</div>
+</div>
