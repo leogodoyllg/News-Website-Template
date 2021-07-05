@@ -1,0 +1,26 @@
+.wishlist-wrapper {
+  padding: 0 5% 0 5%; }
+  .wishlist-wrapper .wishlist-item {
+    border: 1px solid grey;
+    border-radius: 9px;
+    /* color: black; */
+    padding: 10px 10px 10px 10px; }
+    .wishlist-wrapper .wishlist-item .title {
+      font-size: large; }
+    .wishlist-wrapper .wishlist-item .media .cover-book {
+      width: 68%; }
+    .wishlist-wrapper .wishlist-item .info {
+      margin-top: 15px;
+      font-size: medium; }
+      .wishlist-wrapper .wishlist-item .info .product-rating .selected-star {
+        color: #003399 !important; }
+      .wishlist-wrapper .wishlist-item .info .product-rating .unselected-star {
+        color: #4d88ff; }
+    .wishlist-wrapper .wishlist-item .btn-list .btn-item {
+      margin: 3%; }
+    .wishlist-wrapper .wishlist-item .btn-list .btn-cart {
+      background-color: #800040; }
+    .wishlist-wrapper .wishlist-item .btn-list .btn-rm {
+      background-color: teal; }
+
+/*# sourceMappingURL=wishlist.css.map */

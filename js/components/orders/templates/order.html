@@ -1,0 +1,59 @@
+
+<div class="container-fluid order-dashboard">
+	<article class="row order-main-header">
+		<div class="col-lg-10 order-title">Your Placed orders are below..</div>
+		<div class="col-lg-2 order-month-placed">
+			<div class="dropdown" >
+				<button class="btn btn-black" id="order-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					orders placed in 
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="order-dropdown">
+					<li ><a href="#order/getByMonth/2">last 2 months</a></li>
+					<li ><a href="#order/getByMonth/2">last 6 months</a></li>
+					<li ><a href="#order/getByMonth/2">all orders</a></li>
+				</ul>
+			</div>
+		</div>
+	</article>
+	<div class="order-container container">
+			<div class="row order-main order" ng-repeat='order in orders'>
+				<div class="row col-lg-12 order-header">
+					<div class='row row-upper'>
+						<div class='col-xs-2'>Order placed</div>
+						<div class='col-xs-2'>Total</div>
+						<div class='col-xs-3'></div>
+						<div class='col-xs-3 order-id'>Order Id</div>
+					</div>
+					
+					<div class='row'>
+						<div class='col-xs-2 order order-date'>{{order.orderDate}}</div>
+						<div class='col-xs-2 order order-total'>{{order.total| currency:"&#8377;"}}</div>
+						<div class='col-xs-3'></div>
+						<div class='col-xs-3 order order-id'>{{order.Order_id}}</div>
+					</div>
+					
+				</div>
+				<hr/>
+				<div class='row col-sm-12 order order-summary'>
+					<div class='col-sm-8 media order order-components'>
+								<div class="media-left">
+                					<a href=""><img class="item-img img-responsive" ng-src="{{getImageLocation(order.imageLocation)}}"></img></a>
+                				</div>
+                				<div class="media-body">
+                					<div class="media-heading">{{order.title}} </div>
+                					<div class="">Price : {{order.total| currency:"&#8377;"}}</div>
+                					<div class="">Quantity : {{order.copies_ordered}}</div>
+                					<div class="media-heading">Status :{{order.status}}</div>
+                				</div>
+					</div>
+					<div class="col-lg-4 text-right order-detail-btn">
+					<button class="btn btn-black" >
+						<a >Order Details</a>
+					</button>
+				</div>
+				</div>
+			</div>
+		<section class="row order-product_info clearfix"></section>
+	</div>
+</div>

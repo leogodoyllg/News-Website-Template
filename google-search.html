@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search</title>	
+	
+
+
+</head>
+<body >
+
+<input id="text_a" type="text" />
+<p id="answer"></p>
+<button onclick="myFunction()">Check</button>
+<script type = "text/javascript">
+function myFunction()
+{
+var a=document.getElementById("text_a").value;
+
+if (a=="sports")
+  {
+window.location = "http://localhost/News/sports.html";
+  }
+else if (a=="politics")
+  {
+window.location = "http://localhost/News/politics.html";
+  }
+  else if (a=="covid")
+  {
+window.location = "http://localhost/News/covid.html";
+  }
+  else if (a=="international")
+  {
+window.location = "http://localhost/News/international.html";
+  }
+  else if (a=="national")
+  {
+window.location = "http://localhost/News/national.html";
+  }
+
+}
+</script>
+
+</body>
+</html>

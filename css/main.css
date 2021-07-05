@@ -1,0 +1,32 @@
+body{
+	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+}
+
+.page-content-wrapper{
+	width: 100%;
+    position: absolute;
+}
+
+#book-store-container{
+	padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding-left: 250px;
+}
+#book-store-container.toggle-sidebar{
+	padding-left: 0;
+}
+#book-store-container.toggle-sidebar #sidebar-wrapper {
+    width: 0;
+}
+#book-store-container.toggle-sidebar .page-content-wrapper {
+   position: relative;
+    margin-right: 0;
+}
+
+.page-content-wrapper  {
+    position: relative;
+}
+

@@ -1,0 +1,45 @@
+.wishlist-wrapper {
+	padding: 0 5% 0 5%;
+	.wishlist-item{
+		    border: 1px solid grey;
+		    border-radius: 9px;
+		    /* color: black; */
+		    padding: 10px 10px 10px 10px;
+		.title{
+			font-size: large;
+		}
+		.media{
+			.cover-book{
+				width:68%;
+			}
+		}
+		.info{
+			margin-top: 15px;
+		    font-size: medium;
+		    
+		    .product-rating{
+		    	.selected-star{
+					color:#003399 !important;
+				}
+				.unselected-star{
+					color:#4d88ff
+				}
+		    }	
+		}
+		.remove-btn{
+			
+		}
+
+		.btn-list{
+			.btn-item{
+				margin: 3%;
+			}
+			.btn-cart{
+				background-color: #800040;
+			}
+			.btn-rm{
+				background-color: teal;
+			}
+		}
+	}
+}

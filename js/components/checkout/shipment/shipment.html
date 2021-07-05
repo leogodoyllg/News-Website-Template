@@ -1,0 +1,145 @@
+<div class="container">
+	<div class="row">
+		<form name="shipmentForm" class="well form-horizontal col-lg-6 col-lg-offset-3" novalidate>
+			<legend>Please fill in the shipping details</legend>
+			<div class="form-group">
+				<label for="inputUserFName" class="col-md-4 text-left control-label">First name</label>
+				<div class="col-md-8 input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+					<input required ng-minlength="4" ng-maxlength="20" ng-pattern="/^[A-Za-z]{3,20}$/" name="fName" type="text" class="form-control" id="inputUserFName" ng-model="shipment.fname">
+				</div>
+				<p ng-show="shipmentForm.fName.$invalid && !shipmentForm.fName.$pristine" class="help-block col-lg-offset-4">Please enter  valid name</p>
+			</div>
+			<div class="form-group">
+				<label for="inputUserLanme" class="col-md-4 text-left control-label">Last Name</label>
+				<div class="col-md-8 input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+					<input type="text" id="inputUserLanme" ng-minlength="4" ng-maxlength="20" ng-pattern="/^[A-Za-z]{3,20}$/" name="lName" class="form-control" ng-model="shipment.lname">
+				</div>
+				<p ng-show="(shipmentForm.lName.$invalid) && !shipmentForm.lName.$pristine" class="help-block col-lg-offset-4">Please enter valid last name</p>
+			</div>
+			<div class="form-group">
+				<label for="inputEmail" class="col-md-4 text-left control-label">Email</label>
+				<div class="input-group col-lg-8">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+					<input type="email" 
+					name="inputEmail" required id="inputEmail" ng-minlength="7"  name="email" class="form-control" ng-model="shipment.email" ></input>
+				</div>
+				<p ng-show="shipmentForm.inputEmail.$invalid && !shipmentForm.inputEmail.$pristine" class="help-block col-lg-offset-4">Email is invalid !</p>
+			</div>
+			<div class="form-group">
+				<label for="inputPhone" class="col-md-4 text-left control-label">Phone No.</label>
+				<div class="col-md-8 input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+					<input type="text" name="inputPhone" id="inputPhone" ng-minlength="4" ng-maxlength="10" ng-pattern="/^\d{1,10}$/"  class="form-control" ng-model="shipment.phone">
+				</div>
+				<p ng-show="shipmentForm.inputPhone.$invalid && !shipmentForm.inputPhone.$pristine" class="help-block col-lg-offset-4">Please enter valid last name</p>
+			</div>
+			<!-- Country -->
+			<div class="form-group"> 
+			  <label for="inputCountry" class="col-md-4 text-left control-label">Country</label>
+			   
+			    <div class="input-group col-md-8 ">
+			        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+			    	<select name="inputCountry" id="inputCountry" name="state" ng-model="shipment.country" class="form-control selectpicker" ng-options="country for country in countries">
+			    		<option value="Select">----</option>
+			    	</select>
+			 
+				</div>
+				<span ng-show="shipmentForm.inputCountry.$error.required">Select country</span>
+			</div>
+
+
+			<!-- State -->
+			<div class="form-group"> 
+			  <label for="inputState" class="col-md-4 text-left control-label">State</label>
+			   
+			    <div class="input-group col-md-8 ">
+			        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+			    	
+			    	<select name="inputState" id="inputState" ng-disabled="!shipment.country" name="state" ng-model="shipment.state" class="form-control selectpicker" ng-options="state for state in states">
+			    	<option value="Select">----</option>
+			    </select>
+			 
+				</div>
+				<span ng-show="shipmentForm.inputState.$error.required">Select state</span>
+			</div>
+
+
+			<!-- cities -->
+			<div class="form-group"> 
+			  <label for="inputCity" class="col-md-4 text-left control-label">City</label>
+			   
+			    <div class="input-group col-md-8 ">
+			        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+			    	<select name="inputCity" id="inputCity" ng-disabled="!shipment.state" name="state" ng-model="shipment.city" class="form-control selectpicker" ng-options="city for city in cities">
+			    	<option value="Select">----</option>
+			    </select>
+			 
+			</div>
+			<span ng-show="shipmentForm.inputCity.$error.required">Select city</span>
+			</div>
+			<!-- Street -->
+			<div class="form-group">
+				<label for="inputStreet" class="col-md-4 text-left control-label">Street Name</label>
+				<div class="input-group col-md-8 ">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+					<input name="inputStreet" id="inputStreet" class="form-control" ng-minlength="5" ng-maxlength="99" ng-pattern="/^[A-Za-z0-9]{5,20}$/" ng-model="shipment.street" required> </input>
+				</div>
+				<p ng-show="shipmentForm.inputStreet.$invalid && !shipmentForm.inputStreet.$pristine" class="help-block col-lg-offset-4">Enter a street name with 0-99 characters !</p>
+			</div>
+
+			<!-- Building name -->
+			<div class="form-group">
+				<label for="inputBuildingNumber" class="col-md-4 text-left control-label">Building Name/Number</label>
+				<div class="input-group col-md-8 ">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+					<input name="inputBuildingNumber" class="form-control" id="inputBuildingNumber" ng-minlength="5" ng-maxlength="99" ng-model="shipment.building" ng-pattern="/^[A-Za-z0-9 ]{3,20}$/" required> </input>
+				</div>
+				<p ng-show="shipmentForm.inputBuildingNumber.$invalid && !shipmentForm.inputBuildingNumber.$pristine" class="help-block col-lg-offset-4">Enter a valid building name/number! !</p>
+			</div>
+
+			<!-- Room No. -->
+			<div class="form-group">
+				<label for="inputRoomNo" class="col-md-4 text-left control-label">Room Number</label>
+				<div class="input-group col-md-8 ">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+					<input ng-model="shipment.room_no" name="inputRoomNo" class="form-control" id="inputRoomNo" ng-minlength="1" ng-maxlength="6" ng-pattern="/^[0-9]{1,10}$/" required> </input>
+				</div>
+				<p ng-show="shipmentForm.inputRoomNo.$invalid && !shipmentForm.inputRoomNo.$pristine" class="help-block col-lg-offset-4">Room number cannot contain characters or have more than 6 digits!!</p>
+			</div>
+
+			<!-- Zip code -->
+			<div class="form-group">
+				<label for="inputZipCode" class="col-md-4 text-left control-label">Zip Code</label>
+				<div class="input-group col-md-8 ">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+					<input ng-model="shipment.zipcode" name="inputZipCode" class="form-control" id="inputZipCode" ng-minlength="1" ng-maxlength="6" ng-pattern="/^[0-9]{1,10}$/" required> </input>
+				</div>
+				<p ng-show="shipmentForm.inputZipCode.$invalid && !shipmentForm.inputZipCode.$pristine" class="help-block col-lg-offset-4">Enter a valid zip code</p>
+			</div>
+			<!-- Delivery Type -->
+			<div class="form-group">
+				<label for="inputDeliveryType" class="col-md-4 text-left control-label">Delivery Type</label>
+				<div class="input-group col-md-8 ">
+					<label class="radio-inline">
+						<input ng-model="shipment.dt" type="radio" id="inputDeliveryType" name="inputDeliveryType"></input> Home
+					</label>
+					<label class="radio-inline">
+						<input type="radio" ng-model="shipment.dt" id="inputDeliveryType" name="inputDeliveryType"></input> Office
+					</label>
+
+				</div>
+				<p ng-show="shipmentForm.inputDeliveryType.$error && !shipmentForm.inputDeliveryType.$pristine" class="help-block col-lg-offset-4">Please select delivery type!</p>
+			</div>
+			
+			<div class="form-group">
+			  <label class="col-md-4 control-label"></label>
+			  <div class="col-md-4">
+			    <button class="btn btn-warning" ng-disabled="shipmentForm.$invalid" ng-click="submitShipment($event)">Send <span class="glyphicon glyphicon-send"></span></button>
+			  </div>
+			</div>
+
+		</form>
+	</div>
+</div><!-- /.container -->

@@ -1,0 +1,66 @@
+.sidebar-wrapper {
+  width: 250px;
+  background: #261a0d;
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .sidebar-wrapper .panel-heading {
+    border: none;
+    color: #999999;
+    font-size: larger;
+    list-style-type: none;
+    line-height: 18px;
+    border-bottom: 1px solid #1A1A1A; }
+  .sidebar-wrapper .accordion-toggle {
+    cursor: pointer;
+    text-decoration: none; }
+  .sidebar-wrapper .sidebar-component {
+    background-color: #252525;
+    color: #999999;
+    border-top: 1px solid #373737;
+    border-bottom: 1px solid #1A1A1A;
+    border: none; }
+    .sidebar-wrapper .sidebar-component .component-submenu .component-submenu-list {
+      border: none; }
+      .sidebar-wrapper .sidebar-component .component-submenu .component-submenu-list .component-submenu-item {
+        cursor: pointer;
+        background-color: #252525;
+        text-decoration: none;
+        color: #999999;
+        list-style-type: none;
+        text-indent: 20px;
+        color: #999999;
+        border-top: 1px solid #373737;
+        border-bottom: 1px solid #1A1A1A; }
+    .sidebar-wrapper .sidebar-component .component-heading {
+      cursor: pointer;
+      border: none;
+      color: #999999;
+      background-color: #261a0d;
+      list-style-type: none;
+      line-height: 22px;
+      border-bottom: 2px solid #2e2e1f; }
+      .sidebar-wrapper .sidebar-component .component-heading .component-collapse-icon {
+        font-size: large; }
+      .sidebar-wrapper .sidebar-component .component-heading .panel-title {
+        display: inline-block;
+        font-size: large;
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+      .sidebar-wrapper .sidebar-component .component-heading a {
+        font-size: 15px; }
+    .sidebar-wrapper .sidebar-component .component-children .panel-default {
+      margin-top: 0px; }
+    .sidebar-wrapper .sidebar-component .component-children .panel-group {
+      margin-bottom: 0px; }
+
+/*# sourceMappingURL=sidenav.css.map */

@@ -1,0 +1,82 @@
+@CHARSET "ISO-8859-1";
+
+.content-wrapper{
+	padding: 0 20% 0 20%;
+	.item-container{
+		font-size: large;
+		.image-container{
+			margin: auto;
+			height:30%;
+			width:41%;
+
+			img{
+				height: 30%;
+    			width: 83%;
+			}
+
+		}
+		.cart{
+			.btn-addcart{
+				background-color: #800040;
+
+    			border: none;
+			}
+		}
+		.wishlist{
+			
+			.btn-addwish{
+				background-color: #008080;
+
+    			border: none;
+			}
+		}
+	}
+
+	.details-container{
+		.product-info{
+			.nav_tabs{
+					li{
+
+						a{
+							font-size: large;
+    						font-weight: 700;
+						}
+					}
+				}
+			.tab-content{
+				
+				font-size: large;
+				#service-one{
+					.product-desc{
+						padding: 10px;
+					}
+				}
+				#service-two{
+
+				}
+
+				#service-three{
+					.ratings-container{
+						    padding: 10px 10px 10px 10px;
+						    .ratings{
+						    	.ratee{
+						    		    color: teal;
+   										font-style: italic;
+						    	}
+						    	.comments{
+						    		color: #cc0052;
+						    	}
+						    }
+					}
+				}
+			}
+		}
+	}
+}
+
+.selected-star{
+	color:#003399 !important;
+}
+.unselected-star{
+	color:#4d88ff
+}

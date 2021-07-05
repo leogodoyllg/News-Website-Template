@@ -1,0 +1,31 @@
+<div class='wishlist-wrapper container'>
+	<div class='wishlist-name' ng-if='wishlistData.length>0'><h2>{{wishlistData[0].name}}</h2></div>
+	<div class='row wishlist-item' ng-repeat='item in wishlistData'>
+	    <div class='title'>{{item.title}}</div>
+		<div class='col-sm-2 media'>
+			<div class='cover-book'>
+				<img src='{{getImageLocation(item.image_loc)}}' class='img-responsive book-cover'>
+			</div>
+		</div>
+		<div class='col-sm-6 info'>
+			<section class="">
+				<div class="authors">Price {{item.price}}</div>
+				 <div class="product-rating"><span>Ratings: </span>
+					  <span ng-class="{'selected-star':rating == true}" ng-repeat='rating in item.ratingList track by $index' class="glyphicon glyphicon-star unselected-star"></span>
+				</div>
+				<div class="authors">Authors: {{item.authors}}</div>
+				<div class="format">Format: {{item.format}}</div>
+				<div class="isbn">ISBN Number: {{item.isbn}}</div>
+				<div class="publisher">Publisher: {{item.publisher}}</div>
+				<div class="subject">Subject: {{item.subject}}</div>
+				<div class="yop">year of production: {{item.yop}}</div>
+			</section>
+		</div>
+		
+		<div class='btn-list col-sm-2'>
+			<button ng-if='item.available_copies >0' ng-click='addItemToCart(item)' class='btn btn-info btn-item btn-cart'>Add to cart</button>
+			<button class='btn btn-info btn-item btn-rm' ng-click='removefromWishList(item)'>Remove</button>
+		</div>
+		
+	</div>
+</div>

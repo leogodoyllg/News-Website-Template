@@ -1,0 +1,78 @@
+<div class="container cart-container">
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-lg-10 col-xs-12 col-md-offset-1">
+            <table class="table table-hover">
+            	<thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Total</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                	<tr class="cart-item" ng-repeat="item in cartData.items">
+                		<td class="col-lg-8 product">
+                			<div class="media">
+                				<div class="media-left">
+                					<a href=""><img class="item-img img-responsive" ng-src="{{getImageLocation(item.book.image_loc)}}"></img></a>
+                				</div>
+                				<div class="media-body">
+                					<div class="media-heading">{{item.book.title}} </div>
+                					<div class="">Subject : {{item.book.subject}}</div>
+                					<div class="">Authors : {{item.book.authors}}</div>
+                					<div class="">Publipcartsher : {{item.book.publisher}}</div>
+                					<div class="media-heading">Stock :{{item.book.available}}</div>
+                				</div>
+                			</div>
+                			
+                		</td>
+                		<td class="col-lg-1 quantity">
+                			<input type="text" class="form-control text-center" value="{{item.quantity}}">
+                		</td>
+						<td class="col-lg-1 price">{{item.price | currency:"&#8377;"}}</td>
+						<td class="col-lg-1 total">{{item.total | currency:"&#8377;"}}</td>
+						<td class="col-lg-1 remove-item">
+							<button ng-click='removeFromCart(item,$index)' class="btn btn-danger btn-sm btn-remv"><span class="glyphicon glyphicon-trash btn-rmv-icon"></span></button>
+						</td>                		
+                	</tr>
+                	<tr class="subtotal">
+                        <td> &nbsp; </td>
+                        <td> &nbsp; </td>
+                        <td> &nbsp; </td>
+                        <td><h5>Subtotal</h5></td>
+                        <td class="text-right"><h5><strong>{{cartData.total.toFixed(2)| currency:"&#8377;"}}</strong></h5></td>
+                    </tr>
+                    <tr class="shiiping-cost">
+                        <td> &nbsp; </td>
+                        <td> &nbsp; </td>
+                        <td> &nbsp; </td>
+                        <td><h5>Estimated shipping</h5></td>
+                        <td class="text-right"><h5><strong>21</strong></h5></td>
+                    </tr>
+                    <tr class="total">
+                        <td> &nbsp; </td>
+                        <td> &nbsp; </td>
+                        <td> &nbsp; </td>
+                        <td><h3>Total</h3></td>
+                        <td class="text-right"><h3><strong>{{cartData.total.toFixed(2) | currency:"&#8377;"}}</strong></h3></td>
+                    </tr>
+                    <tr class="table-footer">
+                        <td> &nbsp; </td>
+                        <td> &nbsp; </td>
+                        <td> &nbsp; </td>
+                        <td>
+                        <button type="button" class="btn btn-default btn-continue">
+                            <span class="glyphicon glyphicon-shopping-cart"></span><a style="text-decoration: none; color: white;" href="#/bookstore"> Continue Shopping</a> 
+                        </button></td>
+                        <td>
+                        <button type="button" ng-click="checkout()" class="btn btn-success btn-checkout">
+                           <a style="text-decoration: none; color: white;" >Checkout</a>  <span class="glyphicon glyphicon-play"></span>
+                        </button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
