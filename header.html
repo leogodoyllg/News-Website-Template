@@ -1,16 +1,24 @@
 <nav id="main-nav">
     <div class="container">
         <img src="img/octo.jpg" alt="OctoTalk" class="logo">
+        <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html" >About</a></li>
+        <li><a href="search.html" >Search</a></li>
+        </ul>
         <div class = 'social'>
         <a href="http://facebook.com.br" target = 'blank'><i class="fab fa-facebook fa-2x"></i></a>
         <a href="http://twitter.com.br" target = 'blank'><i class="fab fa-twitter fa-2x"></i></a>
         <a href="http://instagram.com.br" target = 'blank'><i class="fab fa-instagram fa-2x"></i></a>
         <a href="http://youtube.com.br" target = 'blank'><i class="fab fa-youtube fa-2x"></i></a>
         </div>
-        <ul>
-        <li><a href="index.html" class="current">Home</a></li>
-        <li><a href="about.html" >About</a></li>
-        <li><a href="search.html" >Search</a></li>
-        </ul>
     </div>
+    
+    <script>
+        $(document).ready(function(){
+            console.log(document.getElementsByTagName("a[href='index']").text);
+            console.log($(location).attr("href").substring($(location).attr('href').lastIndexOf("/")).substring(1));
+        });
+    </script>
+
 </nav>

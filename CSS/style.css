@@ -169,7 +169,7 @@ h1,h2,h3,h4,h5,h6{
 }
 #main-nav .container{
   display: grid;
-  grid-template-columns: 6fr 3fr 2fr;
+  grid-template-columns: 3fr 6fr 3fr;
   padding: 1rem;
   align-items: center;
 }
@@ -179,6 +179,7 @@ h1,h2,h3,h4,h5,h6{
 #main-nav ul{
   justify-self: end;
   display: flex;
+  margin: auto;
 }
 #main-nav ul li a{
   padding: 0.75rem;
