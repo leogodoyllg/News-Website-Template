@@ -10,28 +10,57 @@
   <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <script src="https://kit.fontawesome.com/85a5fdd30e.js" async></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-  <title>NewsGrid | Your News Website</title>
+  <script>
+    $(function(){
+      $("#main-nav").load("header.html"); 
+      $("#footie").load("footer.html"); 
+    })  
+  </script>
+
+
+  <title>OctoTalk | Credible Social Media</title>
 </head>
 <body>
-  <nav id="main-nav">
+  
+  <div id="main-nav"></div>
+
+  <header id = 'showcase'>
     <div class="container">
-      <img src="img/logo.png" alt="NewsMedia" class="logo">
-      <ul>
-        <li><a href="index.html" class="current">Home</a></li>
-        <li><a href="about.html" >About</a></li>
-        <li><a href="login.html" >Log in</a></li>
-        <input type="text" placeholder="Search..">
-      </ul>
+      <div class="showcase-container">
+        <div class="showcase-content">
+          <div class="category category-eng">
+            Engineering
+          </div>
+          <h1>Engineering Article</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste deserunt, at laborum accusamus veniam reprehenderit deleniti reiciendis vel animi ipsum obcaecati ex nesciunt ipsa, voluptatibus provident, quas doloribus molestias. Saepe.</p>
+          <a href="article.html" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
     </div>
-  </nav>
+  </header>
 
   <section id="home-articles" class="py-2">
     <div class="container">
       <div class="articles-container">
-        <article class="card">     
-          <div class="category category-clean-energy">
-            CLean energy
+      
+        <article class="card">
+          <img src="img/articles/ent1.jpg" alt="photo">
+          <div>
+            <div class="category category-ent">
+              Entertainment
+            </div>
+            <h3>
+              <a href="article.html">Lorem ipsum dolor sit amet.</a>
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, facere harum dicta dolor molestias amet eos! Doloribus molestiae cum accusamus?</p>
+          </div>
+        </article>
+
+        <article class="card bg-dark">     
+          <div class="category category-eng">
+            Engineering
           </div>
           <h3>
             <a href="article.html">Lorem ipsum dolor sit amet.</a>
@@ -40,8 +69,21 @@
         </article>
         
         <article class="card">     
-          <div class="category category-clean-energy">
-            Clean energy
+          <img src="img/articles/tech1.jpg" alt="photo">
+          <div class="category category-tec">
+            Technology
+          </div>
+          <h3>
+            <a href="article.html">Lorem ipsum dolor sit amet.</a>
+          </h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium numquam illum ipsa corporis nemo beatae odio exercitationem vel, sit porro?</p>
+        </article>
+        
+        <article class="card">     
+
+          <div class="category category-lan">
+            Language
+
           </div>
           <h3>
             <a href="article.html">Lorem ipsum dolor sit amet.</a>
@@ -52,8 +94,8 @@
 
         <article class="card">     
           <img src="img/articles/tech2.jpg" alt="photo">
-          <div class="category category-tech">
-            Technology
+          <div class="category category-sci">
+            Science
           </div>
           <h3>
             <a href="article.html">Lorem ipsum dolor sit amet.</a>
@@ -61,19 +103,9 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum expedita quam quibusdam ipsum nemo maiores. Cum ipsa amet quaerat sunt.</p>
           </article>
 
-          <article class="card">     
-            <div class="category category-clean-energy">
-              Clean energy
-            </div>
-            <h3>
-              <a href="article.html">Lorem ipsum dolor sit amet.</a>
-            </h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium numquam illum ipsa corporis nemo beatae odio exercitationem vel, sit porro?</p>
-          </article>
-
-          <article class="card">     
-            <div class="category category-clean-energy">
-              Clean energy
+          <article class="card bg-primary">     
+            <div class="category category-bus">
+              Business
             </div>
             <h3>
               <a href="article.html">Lorem ipsum dolor sit amet.</a>
@@ -83,8 +115,8 @@
 
           <article class="card">
             <div>
-              <div class="category category-ent">
-                Entertainment
+              <div class="category category-fa">
+                Fine Arts
               </div>
               <h3>
                 <a href="article.html">Lorem ipsum dolor sit amet.</a>
@@ -98,37 +130,7 @@
   </section>
   
   <footer id = 'main-footer' class = 'py-2'>
-    <div class="container footer-container">
-      <div>
-        <img src="img/logo_light.png" alt="logo">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium quod ratione veniam sit harum excepturi sed quos dignissimos maxime consequatur.</p>
-      </div>
-      <div>
-        <h3>Email Newsletter</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <form>
-          <input type="email" placeholder="Email:" required>
-          <input type="submit" value="Subscribe" class = 'btn btn-primary'>
-        </form>
-      </div>
-      <div>
-        <h3>Site Links</h3>
-        <ul class = 'list'>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Join our Club</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident.</p>
-        <a href="#" class="btn btn-secondary">Join Now</a>
-      </div>
-      <div>
-        <p>
-          Copyright NewsGrid &copy; 2019, All Rights reserved. 
-        </p>
-      </div>
-    </div>
+    <div id="footie"></div>
   </footer>
 </body>
 </html>

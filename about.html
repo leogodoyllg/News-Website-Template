@@ -10,8 +10,16 @@
   <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <script src="https://kit.fontawesome.com/85a5fdd30e.js" async></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-  <title>NewsGrid | About</title>
+  <script>
+    $(function(){
+      $("#main-nav").load("header.html"); 
+      $("#footie").load("footer.html"); 
+    })  
+  </script>
+
+  <title>OctoTalk | About</title>
 </head>
 <body>
   <nav id="main-nav">
@@ -42,32 +50,7 @@
   </section>
   
   <footer id = 'main-footer' class = 'py-2'>
-    <div class="container footer-container">
-      <div>
-        <img src="img/logo_light.png" alt="logo">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium quod ratione veniam sit harum excepturi sed quos dignissimos maxime consequatur.</p>
-      </div>
-      <div>
-        <h3>Email Newsletter</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <form>
-          <input type="email" placeholder="Email:" required>
-          <input type="submit" value="Subscribe" class = 'btn btn-primary'>
-        </form>
-      </div>
-      <div>
-        <h3>Site Links</h3>
-        <ul class = 'list'>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <p>
-          Copyright NewsGrid &copy; 2023, All Rights reserved. 
-        </p>
-      </div>
-    </div>
+    <div id="footie"></div>
   </footer>
 </body>
 </html>
