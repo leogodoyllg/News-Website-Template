@@ -169,12 +169,12 @@ h1,h2,h3,h4,h5,h6{
 }
 #main-nav .container{
   display: grid;
-  grid-template-columns: 6fr 3fr 2fr;
+  grid-template-columns: 5fr 5fr 2fr;
   padding: 1rem;
   align-items: center;
 }
 #main-nav .logo{
-  width: 180px;
+  width: 250px;
 }
 #main-nav ul{
   justify-self: end;
@@ -190,13 +190,6 @@ h1,h2,h3,h4,h5,h6{
 #main-nav ul li a:hover{
   background: var(--light-color);
   color: var(--dark-color);
-}
-#main-nav .social{
-  justify-self: center;
-}
-#main-nav .social i{
-  color: #777;
-  margin-right: 0.5rem;
 }
 
 /* Showcase */
@@ -233,19 +226,16 @@ h1,h2,h3,h4,h5,h6{
 /* Articles */
 #home-articles .articles-container{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 1rem;
 }
 #home-articles .articles-container > *:first-child,
 #home-articles .articles-container > *:last-child{
   display: grid;
-  grid-template-columns: 	repeat(2, 1fr);
+  grid-template-columns: 	repeat(1, 1fr);
   grid-gap: 1rem;
-  grid-column: span 2;
+  
   align-items: center;
-}
-#home-articles .articles-container > *:last-child{
-  grid-column: span 2;
 }
 #article .meta{
   display: flex;
