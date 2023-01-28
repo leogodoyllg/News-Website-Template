@@ -1,14 +1,20 @@
 :root{
-  --primary-color: #c72727;
-  --secondary-color: #f99500;
+  --primary-color: #0A2239;
+  --secondary-color: #ABE188;
   --light-color: #f1f1f1;
   --dark-color: #333;
   --max-width: 1100px;
 }
 .category{
-  --sports-color: #f99500;
-  --ent-color: #a66bbe;
-  --tech-color: #009cff;
+  --eng-color: #333;
+  --com-color: #333;
+  --env-color: #333;
+  --sci-color: #333;
+  --tec-color: #333;
+  --bus-color: #333;
+  --soc-color: #333;
+  --fa-color: #333;
+  --lan-color: #333;
 }
 *{
   margin: 0;
@@ -55,15 +61,37 @@ h1,h2,h3,h4,h5,h6{
   border-radius: 15px;
   margin-bottom: 0.5rem;
 }
-.category-sports{
-  background: var(--sports-color);
+.category-tec{
+  background: var(--tec-color);
 }
-.category-ent{
-  background: var(--ent-color);
+.category-com{
+  background: var(--com-color);
 }
-.category-tech{
-  background: var(--tech-color);
+.category-env{
+  background: var(--env-color);
 }
+.category-sci{
+  background: var(--sci-color);
+}
+.category-eng{
+  background: var(--eng-color);
+}
+.category-com{
+  background: var(--com-color);
+}
+.category-bus{
+  background: var(--bus-color);
+}
+.category-soc{
+  background: var(--soc-color);
+}
+.category-fa{
+  background: var(--fa-color);
+}
+.category-lan{
+  background: var(--lan-color);
+}
+
 .btn{
   display: inline-block;
   border: none;
@@ -174,7 +202,7 @@ h1,h2,h3,h4,h5,h6{
   align-items: center;
 }
 #main-nav .logo{
-  width: 100px;
+  width: 50px;
 }
 #main-nav ul{
   justify-self: end;
