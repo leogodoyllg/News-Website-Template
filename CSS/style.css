@@ -43,7 +43,7 @@ h1,h2,h3,h4,h5,h6{
 .container{
   max-width: var(--max-width);
   margin: auto;
-  padding: 0 2rem;
+  padding: 0 7rem;
   overflow: hidden;
 }
 .category{
@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,h6{
   border-radius: 15px;
   margin-bottom: 0.5rem;
 }
-.category-sports{
+.category-clean-energy{
   background: var(--sports-color);
 }
 .category-ent{
@@ -169,7 +169,7 @@ h1,h2,h3,h4,h5,h6{
 }
 #main-nav .container{
   display: grid;
-  grid-template-columns: 5fr 5fr 2fr;
+  grid-template-columns: 5fr 5fr 3fr;
   padding: 1rem;
   align-items: center;
 }
