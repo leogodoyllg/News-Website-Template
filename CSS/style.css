@@ -44,6 +44,12 @@ h1,h2,h3,h4,h5,h6{
   margin-bottom: .75rem;
   line-height: 1.3;
 }
+.article-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 /* Utilities */
 .container{
@@ -62,38 +68,23 @@ h1,h2,h3,h4,h5,h6{
   margin-bottom: 0.5rem;
 }
 
-.category-tec{
+.category-false{
   background: var(--tec-color);
 }
-.category-clean-energy{
-  background: var(--sports-color);
+.category-half-true{
+  background: var(--tec-color);
 }
-.category-com{
+.category-pantsfire{
   background: var(--com-color);
 }
-.category-env{
+.category-barely-true{
   background: var(--env-color);
 }
-.category-sci{
+.category-mostly-true{
   background: var(--sci-color);
 }
-.category-eng{
-  background: var(--eng-color);
-}
-.category-com{
-  background: var(--com-color);
-}
-.category-bus{
-  background: var(--bus-color);
-}
-.category-soc{
-  background: var(--soc-color);
-}
-.category-fa{
-  background: var(--fa-color);
-}
-.category-lan{
-  background: var(--lan-color);
+.category-true{
+  background: var(--sci-color);
 }
 
 .btn{
@@ -262,8 +253,7 @@ h1,h2,h3,h4,h5,h6{
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 1rem;
 }
-#home-articles .articles-container > *:first-child,
-#home-articles .articles-container > *:last-child{
+#home-articles .articles-container > *:first-child{
   display: grid;
   grid-template-columns: 	repeat(1, 1fr);
   grid-gap: 1rem;
