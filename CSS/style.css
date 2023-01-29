@@ -125,6 +125,14 @@ h1,h2,h3,h4,h5,h6{
   background: #fff;
   padding: 1rem;
 }
+.about{
+  background: #fff;
+  padding: 1rem;
+  margin: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+}
 .bg-dark{
   background: var(--dark-color);
   color: #fff;
