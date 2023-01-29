@@ -1,5 +1,5 @@
 :root{
-  --primary-color: #6458FA;
+  --primary-color: #1A1A22;
   --secondary-color: #1A1A22;
   --light-color: #292B37;
   --dark-color: #1A1A22;
@@ -54,7 +54,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .category{
   display: inline-block;
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-size: 0.55rem;
   text-transform: uppercase;
   padding: 0.4rem 0.6rem;
