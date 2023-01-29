@@ -294,15 +294,14 @@ h1,h2,h3,h4,h5,h6{
 }
 #main-footer .footer-container{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50em
 }
-#main-footer .footer-container > *:last-child{
-  background: #444;
-  grid-column: 1 / span 4;
-  padding: 0.5rem;
-  text-align: center;
-  font-size: 0.8rem;
+.copyright{
+  text-align: center
 }
 #main-footer .footer-container input[type='email']{
   width: 90%;
