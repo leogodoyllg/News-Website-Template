@@ -1,0 +1,17 @@
+<nav id="main-nav">
+    <div class="container">
+        <img src="img/octo.png" alt="OctoTalk" class="logo">
+        <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="graveyard.html" >Graveyard</a></li>
+        <li><a href="about.html" >About</a></li>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function(){
+            console.log(document.getElementsByTagName("a[href='index']").text);
+            console.log($(location).attr("href").substring($(location).attr('href').lastIndexOf("/")).substring(1));
+        });
+    </script>
+
+</nav>

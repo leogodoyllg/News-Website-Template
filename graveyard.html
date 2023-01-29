@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content ="width=device-width, initial-scale=1.0">  
+  <link rel="stylesheet" href="style.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" media = 'screen and (max-width: 768px)' href="./CSS/mobile.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://kit.fontawesome.com/85a5fdd30e.js" async></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <script>
+    $(function(){
+      $("#main-nav").load("header.html"); 
+      $("#footie").load("footer.html"); 
+    })  
+  </script>
+
+
+  <title>OctoTalk | Credible Social Media</title>
+</head>
+<body>
+  
+  <div id="main-nav"></div>
+
+  <article class="card">
+    <h1 class='l-heading'>What is the graveyard?</h1>
+    <p>The Graveyard is where fake news comes to die. This is where articles flagged as false go while articles flagged as true go to the home page.</p>
+    </article>
+
+  <section id="home-articles" class="py-2">
+    <div class="container">
+      <div class="articles-container">
+      
+        <article class="card">
+          <img src="img/articles/img5.jpg" alt="photo" class="article-img">
+          <div>
+            <div class="category category-false">
+              False
+            </div>
+            <h3>
+              <a href="https://www.infowars.com/posts/nih-failed-to-monitor-ecohealth-alliance-federal-watchdog/">NIH Failed To Monitor EcoHealth Alliance: Federal Watchdog</a>
+            </h3>
+            <p>An 18-month audit by the Office of Inspector General (OIG) of the Department of Health and Human Services (HHS) found that the National Institutes of Health (NIH) did not adequately monitor and address problems with EcoHealth Alliance, a New York City-based nonprofit. The audit also uncovered various compliance issues and disallowed costs, leading the OIG to recommend that the Wuhan Institute of Virology (but not EcoHealth) be banned from receiving future NIH funds. Despite this, EcoHealth has continued to receive federal contracts and grants./p>
+          </div>
+        </article> 
+      </div>
+    </div>
+  </section>
+  
+  <footer id = 'main-footer' class = 'py-2'>
+    <div id="footie"></div>
+  </footer>
+</body>
+</html>
