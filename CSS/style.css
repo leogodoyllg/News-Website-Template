@@ -1,8 +1,8 @@
 :root{
-  --primary-color: #0A2239;
-  --secondary-color: #ABE188;
-  --light-color: #f1f1f1;
-  --dark-color: #333;
+  --primary-color: #6458FA;
+  --secondary-color: #1A1A22;
+  --light-color: #292B37;
+  --dark-color: #1A1A22;
   --max-width: 1100px;
 }
 .category{
@@ -40,10 +40,9 @@ img{
   width: 100%;
 }
 h1,h2,h3,h4,h5,h6{
-  font-family: 'Staatliches', cursive;
+  font-family: 'Palatino';
   margin-bottom: .75rem;
   line-height: 1.3;
-  color: #0A2239;
 }
 
 /* Utilities */
@@ -195,7 +194,7 @@ h1,h2,h3,h4,h5,h6{
 
 /* Navigation Bar */
 #main-nav{
-  background: #fff;
+  background: #B42C2C;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -207,7 +206,7 @@ h1,h2,h3,h4,h5,h6{
   align-items: center;
 }
 #main-nav .logo{
-  width: 50px;
+  width: 100px;
 }
 #main-nav ul{
   justify-self: end;
